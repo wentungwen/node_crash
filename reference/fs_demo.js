@@ -32,8 +32,8 @@ const path = require("path");
 
 // rename
 fs.rename(
-  path.join(__dirname, "/test", "hey.txt"),
   path.join(__dirname, "/test", "hello.txt"),
+  path.join(__dirname, "/test", "ello.txt"),
   (err) => {
     if (err) throw err;
     console.log("rename...");
