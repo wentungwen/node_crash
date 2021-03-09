@@ -3,13 +3,20 @@ const path = require("path");
 const fs = require("fs");
 
 const server = http.createServer((req, res) => {
+  // create path
   let filePath = path.join(
     __dirname,
     "public",
     req.url === "/" ? "index.html" : req.url
   );
-  console.log(filePath);
-  res.end();
+
+  // extname of file
+  let extname = path.extname(filePath);
+
+  // initial content type
+  let contentType = "text/html";
+
+  // check ext and set contenttype
 });
 
 const PORT = process.env.PORT || 5000;
